@@ -26,21 +26,21 @@ variabilidade_sexo_salario = round(tapply(salario, sexo, var), 3); sexo_salario 
 # Assimetria do grupo de dados, Gênero em ralação aos salários
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-# Primeiro defina a função, de assimetria, neste caso foi criada uma função
-As_excel<-function(x){
-  n<-length(x)        
-  As_excel<- sum(((x-mean(x))/sd(x))^3)*(n/((n-1)*(n-2)))
-  return(As_excel)
-}
+# # Primeiro defina a função, de assimetria, neste caso foi criada uma função
+# As_excel<-function(x){
+#   n<-length(x)        
+#   As_excel<- sum(((x-mean(x))/sd(x))^3)*(n/((n-1)*(n-2)))
+#   return(As_excel)
+# }
 
 #vamos usar as variáveis já instanciadas aqui na memória, verifique de instanciálas
 #utilize a função tamppy
 assimetria_sexo_salario = round(tapply(salario, sexo, As_excel), 3); assimetria_sexo_salario
 
-#Calculando o percentual de funcionários com grau de instrução de nível superior
-grau_instrucao = table(Banco_de_Dados_2$Grau_de_Instruçao) #Crie uma tabela com os dados alinhados em classes
-percentual_grau_instrucao = prop.table(grau_instrucao); percentual_grau_instrucao
-percentual_grau_instrucao= round(percentual_grau_instrucao, 3)*100
+# #Calculando o percentual de funcionários com grau de instrução de nível superior
+# grau_instrucao = table(Banco_de_Dados_2$Grau_de_Instruçao) #Crie uma tabela com os dados alinhados em classes
+# percentual_grau_instrucao = prop.table(grau_instrucao); percentual_grau_instrucao
+# percentual_grau_instrucao= round(percentual_grau_instrucao, 3)*100
 
 #Percentual de Mulheres com nível médio
 genero_instrucao = table(Banco_de_Dados_2$Genero, Banco_de_Dados_2$Grau_de_Instruçao);genero_instrucao
