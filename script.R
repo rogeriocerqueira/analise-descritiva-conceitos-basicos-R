@@ -51,4 +51,5 @@ percentual_genero_instrucao = round(percentual_genero_instrucao, 3); percentual_
 salarios_tabela = table(Banco_de_Dados_2$Salario);salarios_tabela
 porcentage_salario_categoria = prop.table(salarios_tabela)*100; porcentage_salario_categoria
 
+#Melhorae a analise descritiva
 
